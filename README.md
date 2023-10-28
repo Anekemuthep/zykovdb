@@ -41,7 +41,15 @@ Complex expressions using parentheses are also supported. For instance: `bob * (
    ```
    visualize_graph "my_graph"
    ```
-
+3. **visualize_expression**: Visualize a written graph expression.
+   ```
+   visualize_expression expression
+   ```
+   Example:
+   ```
+   visualize_graph bob * (alice + john) + alice * john * norbert
+   ```
+   
 ## GUI Usage:
 
 1. Open the GUI application.
