@@ -105,23 +105,30 @@ def visualize_graph(g):
     canvas.draw()
     canvas.get_tk_widget().pack()
 
+def visualize_expression(expression):
+    try:
+        g = parse_graph(expression)
+        visualize_graph(g)
+    except ValueError:
+        messagebox.showerror("Error", f"Invalid graph expression!")
+
 def execute_command():
     command = command_entry.get()
-    
-    if "create_graph" in command:
+
+    if command.startswith("create_graph"):
         try:
-            parts = command.split('"')
-            graph_name = parts[1]
+            parts = command.split(" ", 2)  # Split the command into three parts.
+            graph_name = parts[1].strip()
             expression = parts[2].strip()
             save_graph_to_file(graph_name, expression)
             messagebox.showinfo("Success", f"Graph '{graph_name}' created successfully!")
         except Exception as e:
             messagebox.showerror("Error", f"Invalid command format for create_graph! {e}")
-    
-    elif "visualize_graph" in command:
+
+    elif command.startswith("visualize_graph"):
         try:
-            parts = command.split('"')
-            graph_name = parts[1]
+            parts = command.split(" ", 1)  # Split the command into two parts.
+            graph_name = parts[1].strip()
             g = load_graph_from_file(graph_name)
             if g:
                 visualize_graph(g)
@@ -129,8 +136,17 @@ def execute_command():
                 messagebox.showerror("Error", f"Graph '{graph_name}' not found!")
         except Exception as e:
             messagebox.showerror("Error", f"Invalid command format for visualize_graph! {e}")
+    
+    elif command.startswith("visualize_expression"):
+        try:
+            expression = command.replace("visualize_expression", "").strip()
+            visualize_expression(expression)
+        except Exception as e:
+            messagebox.showerror("Error", f"Invalid command format for visualize_expression! {e}")
+    
     else:
         messagebox.showerror("Error", "Unknown command!")
+
 
 # GUI setup
 root = tk.Tk()
