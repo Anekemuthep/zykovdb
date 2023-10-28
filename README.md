@@ -12,7 +12,7 @@ In our custom algebra, a vertex is represented by its name (e.g., "bob"), and ed
 ### Operators:
 
 - **Addition (`+`)**: Represents the union of two graphs.
-- **Multiplication (`*`)**: Represents the product of two graphs.
+- **Multiplication (`*`)**: Represents the link of two graphs.
 
 ### Expressions:
 
