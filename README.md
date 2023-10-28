@@ -53,7 +53,7 @@ Complex expressions using parentheses are also supported. For instance: `bob * (
    ```
    visualize_graph "my_graph"
    ```
-<img width="628" alt="imageOfZykovDb" src="https://github.com/Anekemuthep/zykovdb/assets/31625027/124e54a0-b7ee-4d43-aa3b-de7b2c41e78d">
+<img width="634" alt="imageZykovDB2" src="https://github.com/Anekemuthep/zykovdb/assets/31625027/2d1903a9-acf5-4929-aef8-bbebb9fd4e37">
 
    
 3. **visualize_expression**: Visualize a written graph expression.
