@@ -53,8 +53,6 @@ Complex expressions using parentheses are also supported. For instance: `bob * (
    ```
    visualize_graph "my_graph"
    ```
-<img width="634" alt="imageZykovDB2" src="https://github.com/Anekemuthep/zykovdb/assets/31625027/2d1903a9-acf5-4929-aef8-bbebb9fd4e37">
-
    
 3. **visualize_expression**: Visualize a written graph expression.
    ```
@@ -65,6 +63,8 @@ Complex expressions using parentheses are also supported. For instance: `bob * (
    visualize_graph bob * (alice + john) + alice * john * norbert
    ```
    
+<img width="634" alt="imageZykovDB2" src="https://github.com/Anekemuthep/zykovdb/assets/31625027/2d1903a9-acf5-4929-aef8-bbebb9fd4e37">
+
 ## GUI Usage:
 
 1. Open the GUI application.
